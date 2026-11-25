@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Lunas — Meja Settlement Antar-Agen di HSK Chain",
+  title: "Selesai — Meja Settlement Antar-Agen di HSK Chain",
   description:
     "Dua agen AI bernegosiasi, menyepakati Payment Mandate, dan membayar lewat HSP Gateway — dengan receipt on-chain yang bisa dibaca manusia.",
 };

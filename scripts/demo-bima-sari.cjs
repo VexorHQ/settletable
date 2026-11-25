@@ -30,7 +30,7 @@ const { acceptOffer, agreedTerms, offerPrice, startNegotiation } = require("../s
 const { buildCartMandate, createMandate } = require("../src/server/mandates");
 const { executeSettle, signTransferAuthorization } = require("../src/server/settle");
 const { readReceipt } = require("../src/server/receipts");
-const { DEMO_CAPS, LunasStore } = require("../src/server/store");
+const { DEMO_CAPS, SelesaiStore } = require("../src/server/store");
 const { signCartMandate, usdc } = require("../src/lib/mandate");
 
 const hardhatChain = defineChain({
@@ -52,7 +52,7 @@ async function main() {
   const deployer = mnemonicToAccount(TEST_MNEMONIC, { addressIndex: 0 });
   const bima = mnemonicToAccount(TEST_MNEMONIC, { addressIndex: 1 });
   const sari = mnemonicToAccount(TEST_MNEMONIC, { addressIndex: 2 });
-  const store = new LunasStore();
+  const store = new SelesaiStore();
 
   const publicClient = createPublicClient({ chain: hardhatChain, transport: custom(hre.network.provider) });
   const wallet = createWalletClient({ chain: hardhatChain, transport: custom(hre.network.provider) });

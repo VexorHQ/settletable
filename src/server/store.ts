@@ -30,7 +30,7 @@ export const hskTestnetChain = defineChain({
   blockExplorers: { default: { name: "Blockscout", url: "https://testnet-explorer.hskchain.net" } },
 });
 
-export class LunasStore {
+export class SelesaiStore {
   readonly ledger = new SpendLedger();
   readonly mandates = new MandateStore();
   readonly negotiations = new Map<string, Negotiation>();
@@ -38,11 +38,11 @@ export class LunasStore {
   constructor(readonly caps: SpendCaps = DEMO_CAPS) {}
 }
 
-let shared: LunasStore | undefined;
+let shared: SelesaiStore | undefined;
 
 /** Singleton untuk route API (satu proses Next.js = satu store). */
-export function getStore(): LunasStore {
-  if (!shared) shared = new LunasStore();
+export function getStore(): SelesaiStore {
+  if (!shared) shared = new SelesaiStore();
   return shared;
 }
 

@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.24;
 
-// MockUSDC — token settlement cadangan untuk demo Lunas di HSK testnet.
+// MockUSDC — token settlement cadangan untuk demo Selesai di HSK testnet.
 // ERC-20 6 desimal (seperti USDC) + EIP-3009 transferWithAuthorization.
 // BUKAN uang sungguhan: mint terbuka untuk siapa saja, testnet saja.
 // Jangan pernah deploy kontrak ini ke mainnet — di mainnet pakai USDC HSP

@@ -5,7 +5,7 @@
         "react-dom": "^18.3.0",
         "viem": "^2.30.0"
     },
-    "description": "Lunas — meja settlement antar-agen di HSK Chain (HSK Chain Horizon Hackathon, Track 2)",
+    "description": "Selesai — meja settlement antar-agen di HSK Chain (HSK Chain Horizon Hackathon, Track 2)",
     "devDependencies": {
         "@types/node": "^22.0.0",
         "@types/react": "^18.3.0",
@@ -18,7 +18,7 @@
         "typescript": "^5.6.0",
         "vitest": "^2.1.0"
     },
-    "name": "lunas",
+    "name": "selesai",
     "private": true,
     "scripts": {
         "build": "next build",

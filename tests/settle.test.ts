@@ -280,7 +280,7 @@ describe("Baca receipt — lewat stub client (tanpa chain)", () => {
     recordedAt: 1795610000n,
     memo: "Ringkasan riset 5 sumber — 1 item",
   };
-  const cannedText = "LUNAS RECEIPT\npayment: 0x1234\nmemo: Ringkasan riset 5 sumber — 1 item";
+  const cannedText = "SELESAI RECEIPT\npayment: 0x1234\nmemo: Ringkasan riset 5 sumber — 1 item";
 
   function stubClient(behavior: "found" | "missing") {
     return {
@@ -305,7 +305,7 @@ describe("Baca receipt — lewat stub client (tanpa chain)", () => {
     expect(receipt.payee).toBe(sari.address);
     expect(receipt.amount).toBe(usdc("0.45"));
     expect(receipt.memo).toBe("Ringkasan riset 5 sumber — 1 item");
-    expect(text).toContain("LUNAS RECEIPT");
+    expect(text).toContain("SELESAI RECEIPT");
   });
 
   it("daftar receipt per payer/payee + jumlah total", async () => {

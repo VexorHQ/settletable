@@ -1,6 +1,6 @@
 # src/server/
 
-Logika server Lunas — tanpa database, state demo hidup di memori (lihat
+Logika server Selesai — tanpa database, state demo hidup di memori (lihat
 `store.ts`). Hanya modul di sini yang boleh memegang kunci privat (dari `.env`
 server). Tidak ada kunci yang dikirim ke browser.
 
@@ -20,7 +20,7 @@ server). Tidak ada kunci yang dikirim ke browser.
   → catat ledger → baca `receiptText`. Bila receipt/ledger gagal SETELAH
   transfer, lempar error keras — perlu rekonsiliasi manual.
 - `receipts.ts` — baca receipt dari kontrak (tanpa kunci, tanpa tulis).
-- `store.ts` — `LunasStore` (ledger + MandateStore + negosiasi) + `DEMO_CAPS`
+- `store.ts` — `SelesaiStore` (ledger + MandateStore + negosiasi) + `DEMO_CAPS`
   (0,50/transaksi, 5,00/hari) + config chain dari `.env` + executor.
 
 ## Route API (src/app/api/) — ditulis hari ke-3

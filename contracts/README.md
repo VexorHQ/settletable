@@ -20,4 +20,4 @@ Skrip (semua `.cjs`, lihat komentar di tiap file soal kenapa bukan `.ts`):
 - `scripts/deploy-testnet.cjs` — deploy keduanya ke testnet 133
   (`npm run deploy:testnet`; butuh tHSK + DEPLOYER_PRIVATE_KEY).
 - `scripts/deploy-mainnet.cjs` — placeholder; menolak deploy tanpa
-  `LUNAS_MAINNET_CONFIRMED=yes` + yes Junes (PLAN.md §11.2).
+  `SELESAI_MAINNET_CONFIRMED=yes` + yes Junes (PLAN.md §11.2).

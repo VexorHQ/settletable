@@ -1,10 +1,10 @@
-# Lunas — Meja Settlement Antar-Agen di HSK Chain
+# Selesai — Meja Settlement Antar-Agen di HSK Chain
 
 **Status: riset + rencana selesai, belum ada kode fitur.** Dokumen rencana ada di
 [`PLAN.md`](PLAN.md), hasil riset di [`RESEARCH.md`](RESEARCH.md). Implementasi
 mulai setelah rencana direview.
 
-Lunas adalah proyek untuk **HSK Chain Horizon Hackathon · Seoul, Track 2 (Agent
+Selesai adalah proyek untuk **HSK Chain Horizon Hackathon · Seoul, Track 2 (Agent
 Payments & A2A Settlement)**. Dua agen AI bernegosiasi harga, menyepakati
 Payment Mandate yang ditandatangani wallet, membayar lewat HSP Gateway, dan
 setiap pembayaran meninggalkan receipt on-chain yang bisa dibaca manusia.

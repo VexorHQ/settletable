@@ -13,3 +13,4 @@ typechain-types
 .DS_Store
 merchant-key*.pem
 *.pem
+*.key

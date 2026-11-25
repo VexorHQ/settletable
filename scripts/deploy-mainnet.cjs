@@ -1,7 +1,7 @@
 // Deploy ke HSK Chain mainnet (chain 177) — PLACEHOLDER, JANGAN DIJALANKAN
 // sebelum keputusan Junes soal anggaran mainnet (PLAN.md §11.2).
 //
-// Dijalankan (nanti, 1 Des): LUNAS_MAINNET_CONFIRMED=yes npm run deploy:mainnet
+// Dijalankan (nanti, 1 Des): SELESAI_MAINNET_CONFIRMED=yes npm run deploy:mainnet
 // Tanpa variabel itu, skrip ini HANYA mencetak rencana dan berhenti —
 // tidak ada transaksi yang dikirim, tidak ada yang di-deploy.
 //
@@ -31,9 +31,9 @@ function loadArtifact(name) {
 }
 
 async function main() {
-  if (process.env.LUNAS_MAINNET_CONFIRMED !== "yes") {
+  if (process.env.SELESAI_MAINNET_CONFIRMED !== "yes") {
     console.log("=== DEPLOY MAINNET — DITAHAN ===");
-    console.log("Skrip ini tidak melakukan apa-apa tanpa LUNAS_MAINNET_CONFIRMED=yes.");
+    console.log("Skrip ini tidak melakukan apa-apa tanpa SELESAI_MAINNET_CONFIRMED=yes.");
     console.log("");
     console.log("Yang akan terjadi bila dikonfirmasi (1 Des, setelah yes Junes):");
     console.log("  1. Deploy ReceiptRegistry SAJA ke HSK mainnet (chain 177).");

@@ -272,7 +272,7 @@ async function main() {
     functionName: "receiptText",
     args: [paymentId],
   });
-  assert.ok(text.startsWith("LUNAS RECEIPT"));
+  assert.ok(text.startsWith("SELESAI RECEIPT"));
   assert.ok(text.includes(memo));
   assert.ok(text.includes(bima.address.toLowerCase()));
   console.log("  ok — receiptText terbaca seperti dokumen tagihan");

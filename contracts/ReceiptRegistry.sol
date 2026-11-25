@@ -6,7 +6,7 @@ pragma solidity ^0.8.24;
 // = satu pembayaran: mandate yang disetujui, siapa bayar siapa, token + jumlah,
 // tx settlement, dan satu baris memo yang terbaca ("Ringkasan riset 5 sumber").
 // Dashboard menampilkan receipt seperti dokumen tagihan; siapa saja bisa
-// memverifikasi isinya lewat explorer tanpa harus percaya server Lunas.
+// memverifikasi isinya lewat explorer tanpa harus percaya server Selesai.
 //
 // Satu paymentId hanya boleh tercatat sekali — ini yang mencegah receipt
 // ganda untuk pembayaran yang sama.
@@ -122,7 +122,7 @@ contract ReceiptRegistry {
         return
             string(
                 abi.encodePacked(
-                    "LUNAS RECEIPT\n",
+                    "SELESAI RECEIPT\n",
                     "payment: ",
                     _bytes32ToString(receipt.paymentId),
                     "\n",
