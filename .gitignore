@@ -1,0 +1,15 @@
+node_modules
+.next
+out
+dist
+.env
+.env.*
+!.env.example
+coverage
+artifacts
+cache
+typechain-types
+*.log
+.DS_Store
+merchant-key*.pem
+*.pem

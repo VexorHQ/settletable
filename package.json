@@ -1,0 +1,35 @@
+{
+    "dependencies": {
+        "next": "^14.2.0",
+        "react": "^18.3.0",
+        "react-dom": "^18.3.0",
+        "viem": "^2.30.0"
+    },
+    "description": "Lunas — meja settlement antar-agen di HSK Chain (HSK Chain Horizon Hackathon, Track 2)",
+    "devDependencies": {
+        "@types/node": "^22.0.0",
+        "@types/react": "^18.3.0",
+        "@types/react-dom": "^18.3.0",
+        "autoprefixer": "^10.4.0",
+        "hardhat": "^2.22.0",
+        "postcss": "^8.4.0",
+        "tailwindcss": "^3.4.0",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.6.0",
+        "vitest": "^2.1.0"
+    },
+    "name": "lunas",
+    "private": true,
+    "scripts": {
+        "build": "next build",
+        "contracts:compile": "hardhat compile",
+        "dev": "next dev",
+        "start": "next start",
+        "test": "vitest run",
+        "test:contracts": "hardhat run scripts/test-contracts.cjs",
+        "demo": "hardhat run scripts/demo-bima-sari.cjs",
+        "deploy:testnet": "hardhat run scripts/deploy-testnet.cjs --network hskTestnet",
+        "deploy:mainnet": "hardhat run scripts/deploy-mainnet.cjs --network hskMainnet"
+    },
+    "version": "0.1.0"
+}
