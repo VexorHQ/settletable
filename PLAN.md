@@ -1,4 +1,4 @@
-# PLAN — Selesai: Meja Settlement Antar-Agen di HSK Chain
+# PLAN — SettleTable: Meja Settlement Antar-Agen di HSK Chain
 
 **Hackathon:** HSK Chain Horizon Hackathon · Seoul, Track 2 — Agent Payments & A2A
 Settlement (HSP) · **Deadline submit: 3 Des 2026 11:00 WIB** · Demo Day 5 Des,
@@ -12,8 +12,8 @@ sebelum menyentuh rencana ini.
 
 ## 0. Ide dalam satu paragraf
 
-Nama kerja: **Selesai** — dari bahasa Indonesia, "selesai" = tuntas, beres, urusan kelar.
-Bukan checkout sekali bayar. Selesai adalah meja settlement tempat dua agen AI
+Nama kerja: **SettleTable** — dari bahasa Inggris, "settle" = menyelesaikan/melunasi, "table" = meja: meja tempat dua agen menyelesaikan pembayaran.
+Bukan checkout sekali bayar. SettleTable adalah meja settlement tempat dua agen AI
 bernegosiasi, menyepakati harga, lalu membayar lewat **Payment Mandate** yang
 ditandatangani wallet, diverifikasi + dieksekusi **HSP Gateway**, dan setiap
 pembayaran meninggalkan **receipt on-chain yang bisa dibaca manusia** seperti
@@ -23,7 +23,7 @@ menunjukkan semua mandate, sisa batas, settlement, dan receipt.
 
 Kenapa bukan sekadar "402 checkout"? Karena itu sudah dibangun peserta lain di
 track yang sama (AgentSettle: 402 + EIP-3009 + receipt, kontrak receipt sudah di
-mainnet 177). Meniru mereka berarti kalah di "sudah duluan". Selesai mengambil
+mainnet 177). Meniru mereka berarti kalah di "sudah duluan". SettleTable mengambil
 bagian yang justru dijual HSP sendiri tapi belum ada yang menunjukkannya end-to-end:
 **mandate sebagai dokumen keuangan yang bisa diaudit** — negosiasi → mandate →
 tanda tangan → gateway → receipt yang terbaca.
@@ -41,7 +41,7 @@ dipertanggungjawabkan. Kalau Agen A menyuruh Agen B mengerjakan sesuatu:
 - Settlement antar-agen yang ada hari ini menempel ke satu chain/token dan satu
   facilitator; ganti token berarti tulis ulang.
 
-Selesai menjawab keempatnya dengan satu alur yang sama dari awal sampai akhir:
+SettleTable menjawab keempatnya dengan satu alur yang sama dari awal sampai akhir:
 kesepakatan tertulis (terms) → mandate bertanda tangan (batas + masa berlaku) →
 eksekusi lewat gateway → receipt yang merujuk balik ke mandate dan terms-nya.
 
@@ -108,7 +108,7 @@ Agen Pembeli (Bima)            Agen Penjual (Sari)
    |  HTTP: katalog + tawar       |  HTTP: terms + hasil kerja
    v                              v
 ┌─────────────────────────────────────────────────┐
-│  Selesai — Next.js app (Vercel)                   │
+│  SettleTable — Next.js app (Vercel)                   │
 │  /api/terms      katalog + negosiasi            │
 │  /api/mandates   buat/verifikasi/cabut mandate  │
 │  /api/settle     eksekusi via HSP Gateway       │
@@ -263,7 +263,7 @@ dipaksakan sampai 3 Des.
 
 ## 11. Keputusan — DIPUTUSKAN 25 Nov 20:52 WIB (Junes: "kamu pilih dan buat sendiri saja" / "kamu atur saja")
 
-1. **Nama proyek "Selesai"** — DIPAKAI. Repo `VexorHQ/selesai` (publik). **Diganti dari "Lunas" 25 Nov 21:34 WIB atas perintah Junes ("Ganti kata lunas dengan selesai")** — seluruh kode, dokumen, UI, nama file kunci deployer, dan repo GitHub ikut diganti; email permohonan merchant HSP yang sudah terkirim 21:09 masih memakai nama lama (koreksi menyusul).
+1. **Nama proyek "SettleTable"** — DIPAKAI (dipilih Junes 25 Nov ~22:03 dari daftar kandidat Inggris yang dicek tabrakannya; "settle" = menyelesaikan/melunasi, "table" = meja). Repo `VexorHQ/settletable` (publik). **Riwayat nama:** "Lunas" (usulan Scout, diputuskan 20:52 atas delegasi Junes) → "Selesai" (perintah Junes 21:34) → "SettleTable" (pilihan Junes ~22:03, setelah minta kata Inggris). Setiap ganti nama ikut mengubah seluruh kode, dokumen, UI, nama file kunci deployer, dan repo GitHub. Email permohonan merchant HSP: email 1 (21:34) memakai "Lunas", koreksi #1 (21:37) ke "Selesai", koreksi #2 ke "SettleTable" menyusul.
 2. **Anggaran mainnet: 3 HSK + 0,50 USDC.** Hitungan dari gas nyata (diukur di Hardhat lokal 25 Nov 20:52, gas price mainnet 500 gwei dari RPC): deploy ReceiptRegistry 2.284.867 gas = 1,14 HSK; satu recordReceipt 411.756 gas = 0,21 HSK; satu settle EIP-3009 (~150k gas) = 0,075 HSK. Demo lengkap (deploy + 2 settle + 2 receipt) = 1,70 HSK; 3 HSK memberi buffer ~1,3 HSK untuk lonjakan gas/percobaan ulang. USDC 0,50 = pembayaran demo 0,45 + margin. **Pembelian HSK + USDC mainnet BELUM dilakukan** — butuh jalur (exchange/bridge) + dana; disiapkan setelah deploy testnet jalan. Tanpa mainnet, peluang menang praktis nol (§8.2).
 3. **Akses HSP:** registrasi merchant pakai email **vexordev@proton.me**, organisasi **"Vexor"** (key pair secp256k1 sudah dibuat 25 Nov 20:35, diregenerasi 21:09). Portal merchant TIDAK punya pendaftaran mandiri — permohonan onboarding dikirim via email ke tim operations HashKey 21:09 (hsp@hashkey.com, Cc merchant@hashkey.com); undangan organisasi ditunggu.
 4. **Video demo:** Scout siapkan file mentah + upload sendiri ke Vexor Builds (hari ke-6, 1 Des). Bukan Junes yang upload.

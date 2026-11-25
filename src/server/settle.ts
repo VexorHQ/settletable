@@ -71,7 +71,7 @@ export interface TransferAuth {
   value: bigint;
   validAfter: bigint;
   validBefore: bigint;
-  nonce: Hex; // bytes32 — di Selesai dipakai paymentId, satu otorisasi per pembayaran
+  nonce: Hex; // bytes32 — di SettleTable dipakai paymentId, satu otorisasi per pembayaran
   v: number;
   r: Hex;
   s: Hex;
